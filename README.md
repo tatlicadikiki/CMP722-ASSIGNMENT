@@ -1,20 +1,19 @@
 # CMP722-ASSIGNMENT
-Self-Supervised Learning vs. Fine-Tuning: A Comparative Analysis on Satellite Imagery (EuroSAT)
 
-# Self-Supervised Learning vs. Fine-Tuning: A Comparative Analysis on Satellite Imagery 🛰️
+# Self-Supervised Learning vs. Fine-Tuning: A Comparative Analysis on Satellite Imagery (EuroSAT)
 
 This repository contains the implementation and analysis for the **CMP722 - Advanced Computer Vision** assignment. The project investigates the efficacy of representation learning techniques in the domain of remote sensing, specifically comparing **Supervised Fine-Tuning**, **Training from Scratch**, and **Self-Supervised Learning (SimCLR)**.
 
-## 🎯 Objective
+## Objective
 To explore how representation learning and transfer learning can improve model performance on domain-specific datasets (Satellite Imagery) compared to training from scratch, with a focus on label efficiency and convergence speed.
 
-## 📊 Dataset: EuroSAT (RGB)
+## Dataset: EuroSAT (RGB)
 We utilized the **EuroSAT** dataset, which consists of Sentinel-2 satellite images.
 * **Total Images:** 27,000
 * **Classes (10):** Annual Crop, Forest, Herbaceous Vegetation, Highway, Industrial, Pasture, Permanent Crop, Residential, River, Sea/Lake.
 * **Split Strategy:** To prevent data leakage and ensure robust evaluation, the data was split into **70% Train**, **15% Validation**, and **15% Test**.
 
-## 🧠 Methodologies Implemented
+## Methodologies Implemented
 
 All experiments utilize a **ResNet-18** backbone.
 
@@ -31,23 +30,3 @@ All experiments utilize a **ResNet-18** backbone.
     * **Linear Evaluation:** Freezing the encoder and training a linear classifier on top.
 
 **Note:** An **Early Stopping** mechanism (Patience=5) based on Validation Loss was implemented for all experiments to prevent overfitting.
-
-## 🛠️ Installation & Usage
-
-1.  **Clone the repository:**
-    ```bash
-    git clone [https://github.com/yourusername/your-repo-name.git](https://github.com/yourusername/your-repo-name.git)
-    cd your-repo-name
-    ```
-
-2.  **Install dependencies:**
-    ```bash
-    pip install torch torchvision scikit-learn matplotlib numpy requests
-    ```
-
-3.  **Run the analysis:**
-    You can run the script directly. It will automatically download the EuroSAT dataset and perform all 3 experiments.
-    ```bash
-    python main.py
-    ```
-    *(Or open the `.ipynb` notebook in Google Colab)*
